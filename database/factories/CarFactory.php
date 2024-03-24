@@ -24,9 +24,6 @@ class CarFactory extends Factory
         $vehicle = $this->faker->vehicleArray();
 
         return [
-//            'reg_number' => $this->faker->bothify('???###'),
-//            'brand' => $this->faker->word,
-//            'model' => $this->faker->vehicleModel,
             'reg_number' => $this->faker->vehicleRegistration('[A-Z]{3}-[0-9]{3}'),
             'brand'           => $vehicle['brand'],
             'model'           => $vehicle['model'],

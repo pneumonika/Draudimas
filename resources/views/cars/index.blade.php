@@ -6,17 +6,17 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        Automobiliai.
-                        <a class="btn btn-primary" href="{{ route('cars.create') }}">Pridėti</a>
+                        {{ __('Automobiliai') }}.
+                        <a class="btn btn-primary" href="{{ route('cars.create') }}">{{ __('Pridėti') }}</a>
                     </div>
                     <div class="card-body">
                         <table class="table">
                             <thead>
                             <tr>
-                                <th>Valstybiniai numeriai</th>
-                                <th>Markė</th>
-                                <th>Modelis</th>
-                                <th>Savininkas</th>
+                                <th>{{ __('Valstybiniai numeriai') }}</th>
+                                <th>{{ __('Markė') }}</th>
+                                <th>{{ __('Modelis') }}</th>
+                                <th>{{ __('Savininkas') }}</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -28,13 +28,13 @@
                                     <td>{{ $car->model }}</td>
                                     <td>{{ $car->owner->name }} {{ $car->owner->surname }}</td>
                                     <td style="width: 100px;">
-                                        <a class="btn btn-info" href="{{ route('cars.edit', $car) }}">Redaguoti</a>
+                                        <a class="btn btn-info" href="{{ route('cars.edit', $car) }}">{{ __('Redaguoti') }}</a>
                                     </td>
                                     <td style="width: 100px;">
                                         <form method="post" action="{{ route('cars.destroy', $car) }}">
                                             @csrf
                                             @method("delete")
-                                            <button class="btn btn-danger">Ištrinti</button>
+                                            <button class="btn btn-danger">{{ __('Ištrinti') }}</button>
                                         </form>
                                     </td>
                                 </tr>
